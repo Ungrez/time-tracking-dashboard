@@ -79,13 +79,56 @@ body.loaded {
   color: hsl(236deg, 100%, 87%);
 }
 
+@media (min-width: 992px) {
+  #main {
+    margin: 15vh auto;
+    max-width: 1100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 60px 20px;
+    gap: 25px;
+    height: 70vh;
+  }
+  #main_user {
+    display: flex;
+    flex-direction: column;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  #main_user_name {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: hsl(246deg, 80%, 60%);
+    align-items: flex-start;
+    padding: 30px;
+  }
+  #main_user_name_desc p:nth-child(1) {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  #main_user_name_desc p:nth-child(2) {
+    line-height: 1.3;
+    font-size: 32px;
+  }
+  #main_user_select {
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 30px;
+  }
+  #main_user_select p {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+}
 .main_box {
   position: relative;
   transition: 0.5s;
   opacity: 0;
   height: 170px;
   width: 100%;
-  background-color: green;
   border-radius: 15px;
   overflow: hidden;
   margin-top: 40px;
@@ -131,7 +174,7 @@ body.loaded {
   left: 0;
   width: 100%;
   height: 75%;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: hsl(235deg, 46%, 20%);
   line-height: 1.5;
   padding: 0 30px;
@@ -150,6 +193,9 @@ body.loaded {
 .main_box_desc_time p:nth-child(2) {
   font-size: 32px;
   font-weight: 300;
+}
+.main_box_desc_time p:nth-child(3) {
+  display: none;
 }
 .main_box_desc_info {
   line-height: 2;
@@ -170,4 +216,38 @@ body.loaded {
 .main_box.loaded {
   opacity: 1;
   margin-top: 0;
+}
+
+@media (min-width: 992px) {
+  .main_box {
+    height: 100%;
+    margin-top: 40px;
+  }
+  .main_box_desc {
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding: 30px;
+  }
+  .main_box_desc_time {
+    align-self: flex-start;
+  }
+  .main_box_desc_time p:nth-child(1) {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .main_box_desc_time p:nth-child(2) {
+    margin-top: 20px;
+    font-size: 48px;
+  }
+  .main_box_desc_time p:nth-child(3) {
+    display: block;
+    color: hsl(236deg, 100%, 87%);
+  }
+  .main_box_desc_info {
+    align-self: flex-start;
+  }
+  .main_box_desc_info p {
+    display: none;
+  }
 }/*# sourceMappingURL=main.min.css.map */

@@ -6,3 +6,108 @@ body {
     opacity: 1;
   }
 }
+#main {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  padding: 60px 20px;
+  gap: 25px;
+
+  &_user {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 100%;
+    background-color: $dark-blue;
+    border-radius: 15px;
+    &_name {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: $blue;
+      border-radius: 15px;
+      flex-basis: 65%;
+      width: 100%;
+      align-items: center;
+      & img {
+        border-radius: 50%;
+        border: 3px solid white;
+        width: 75px;
+        height: 75px;
+      }
+      &_desc p:nth-child(1) {
+        color: $pale-blue;
+        line-height: 1.5;
+      }
+      &_desc p:nth-child(2) {
+        line-height: 1.5;
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+    &_select {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      & p {
+        color: $desaturated-blue;
+        font-size: 18px;
+        align-self: center;
+        cursor: pointer;
+        transition: 0.4s;
+        &.active {
+          color: $pale-blue;
+        }
+        &:hover {
+          color: $pale-blue;
+        }
+      }
+    }
+  }
+}
+@include mq(lg) {
+  #main {
+    margin: 15vh auto;
+    max-width: 1100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 60px 20px;
+    gap: 25px;
+    height: 70vh;
+
+    &_user {
+      display: flex;
+      flex-direction: column;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+      &_name {
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: $blue;
+        align-items: flex-start;
+        padding: 30px;
+        &_desc p:nth-child(1) {
+          margin-top: 30px;
+          font-size: 18px;
+        }
+        &_desc p:nth-child(2) {
+          line-height: 1.3;
+          font-size: 32px;
+        }
+      }
+      &_select {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 30px;
+        & p {
+          align-self: flex-start;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

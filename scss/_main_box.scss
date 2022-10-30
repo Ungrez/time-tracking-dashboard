@@ -1,0 +1,146 @@
+#main {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  padding: 60px 20px;
+  gap: 25px;
+
+  &_user {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    width: 100%;
+    background-color: $dark-blue;
+    border-radius: 15px;
+    &_name {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: $blue;
+      border-radius: 15px;
+      flex-basis: 65%;
+      width: 100%;
+      align-items: center;
+      & img {
+        border-radius: 50%;
+        border: 3px solid white;
+        width: 75px;
+        height: 75px;
+      }
+      &_desc p:nth-child(1) {
+        color: $pale-blue;
+        line-height: 1.5;
+      }
+      &_desc p:nth-child(2) {
+        line-height: 1.5;
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+      }
+    }
+    &_select {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      & p {
+        color: $desaturated-blue;
+        font-size: 18px;
+        align-self: center;
+        cursor: pointer;
+        transition: 0.4s;
+        &.active {
+          color: $pale-blue;
+        }
+        &:hover {
+          color: $pale-blue;
+        }
+      }
+    }
+  }
+}
+.main_box {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  background-color: green;
+  border-radius: 15px;
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+  &.main_work {
+    background-color: $light-red-work;
+    & img {
+      top: -10px;
+    }
+  }
+  &.main_play {
+    background-color: $soft-blue-play;
+  }
+  &.main_study {
+    background-color: $light-red-study;
+  }
+  &.main_exercise {
+    background-color: $lime-green-exercise;
+  }
+  &.main_social {
+    background-color: $violet-social;
+    & img {
+      top: -15px;
+    }
+  }
+  &.main_selfCare {
+    background-color: $soft-orange-self-care;
+    & img {
+      top: -10px;
+    }
+  }
+  &_desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    border-radius: 15px;
+    background-color: $dark-blue;
+    line-height: 1.5;
+    padding: 0 30px;
+    transition: 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $desaturated-blue;
+    }
+    &_time {
+      color: white;
+      & p:nth-child(1) {
+        font-size: 18px;
+      }
+      & p:nth-child(2) {
+        font-size: 32px;
+        font-weight: 300;
+      }
+    }
+    &_info {
+      line-height: 2;
+      text-align: right;
+      transition: 0.5s;
+      & p {
+        font-size: 16px;
+        line-height: 3.5;
+        color: $pale-blue;
+      }
+      & img {
+        transition: 0.5s;
+        &:hover {
+          filter: brightness(200%);
+        }
+      }
+    }
+  }
+}

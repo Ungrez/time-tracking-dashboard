@@ -90,18 +90,14 @@ body.loaded {
     height: 70vh;
   }
   #main_user {
-    display: flex;
-    flex-direction: column;
     grid-row-start: 1;
     grid-row-end: 3;
     height: 100%;
     width: 100%;
-    border-radius: 15px;
   }
   #main_user_name {
     flex-direction: column;
     justify-content: flex-start;
-    background-color: hsl(246deg, 80%, 60%);
     align-items: flex-start;
     padding: 30px;
   }

@@ -77,17 +77,13 @@ body {
     height: 70vh;
 
     &_user {
-      display: flex;
-      flex-direction: column;
       grid-row-start: 1;
       grid-row-end: 3;
       height: 100%;
       width: 100%;
-      border-radius: 15px;
       &_name {
         flex-direction: column;
         justify-content: flex-start;
-        background-color: $blue;
         align-items: flex-start;
         padding: 30px;
         &_desc p:nth-child(1) {

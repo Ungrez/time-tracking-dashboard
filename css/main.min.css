@@ -12,6 +12,11 @@ body {
 
 body {
   background-color: hsl(226deg, 43%, 10%);
+  opacity: 0;
+  transition: 0.5s;
+}
+body.loaded {
+  opacity: 1;
 }
 
 #main {
@@ -76,11 +81,14 @@ body {
 
 .main_box {
   position: relative;
+  transition: 0.5s;
+  opacity: 0;
   height: 170px;
   width: 100%;
   background-color: green;
   border-radius: 15px;
   overflow: hidden;
+  margin-top: 40px;
 }
 .main_box > img {
   position: absolute;
@@ -158,4 +166,8 @@ body {
 }
 .main_box_desc_info img:hover {
   filter: brightness(200%);
+}
+.main_box.loaded {
+  opacity: 1;
+  margin-top: 0;
 }/*# sourceMappingURL=main.min.css.map */
